@@ -12,12 +12,12 @@ module.exports = merge(
   {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     entry: {
-      site: './src/js/site.js',
-      admin: './src/js/admin.js'
+      site: './starter-theme/src/js/site.js',
+      admin: './starter-theme/src/js/admin.js'
     },
     output: {
       filename: '[name].js',
-      path: path.resolve(__dirname, 'dist/')
+      path: path.resolve(__dirname, 'dist/starter-theme/assets/')
     },
     module: {
       rules: [
