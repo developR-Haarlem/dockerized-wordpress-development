@@ -34,6 +34,10 @@ module.exports = {
 			{
 				from: './starter-theme/template-parts/**/*',
 				to: path.resolve(__dirname, 'dist/')
+			},
+			{
+				from: './starter-theme/assets/**/*',
+				to: path.resolve(__dirname, 'dist/')
 			}
 		]),
 		new MiniCssExtractPlugin({ 

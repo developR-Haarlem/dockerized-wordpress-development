@@ -1,0 +1,54 @@
+$font-primary: (
+	font-family: (
+		Roboto,
+		serif
+	),
+	load: true,
+	weights: (
+		'Regular': 400,
+		'Medium': 500,
+		'Bold': 600,
+		'Black': 900
+	),
+	font-weights: true,
+	path: '~Fonts',
+	files: (
+		'woff',
+		'woff2'
+	),
+	use: (
+		'p',
+		'body'
+	),
+	types: (
+		'normal'
+	)
+);
+
+$font-secondary: (
+	font-family: (
+		RobotoCondensed,
+		serif
+	),
+	load: true,
+	weights: (
+		'Light': 300,
+		'Regular': 400,
+		'Bold': 600
+	),
+	font-weights: true,
+	path: '~Fonts',
+	files: (
+		'woff',
+		'woff2'
+	),
+	use: (
+		'h1',
+		'h2',
+		'h3',
+		'a'
+	),
+	types: (
+		'normal'
+	)
+);

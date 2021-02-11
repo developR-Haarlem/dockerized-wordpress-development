@@ -1,0 +1,124 @@
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+	color: inherit;
+	span, a {
+		color: inherit;
+	}
+}
+
+h1 {
+	font-size: grid(1.2);
+	line-height: 1;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: color(Dark);
+	@include min-('font-size', 1.5, 64);
+	@include max-('font-size', 1.5, 180);
+	&.light {
+		color: color(Light);
+	}
+}
+
+h2 {
+	font-size: grid(0.8);
+	line-height: 1;
+	font-weight: 600;
+	color: color(Dark);
+	text-transform: uppercase;
+	@include min-('font-size', 1, 48);
+	@include max-('font-size', 1, 120);
+	&.light {
+		color: color(Light);
+	}
+}
+
+h3 {
+	font-size: rem(48);
+	line-height: 1;
+	font-weight: bold;
+
+	& + p {
+		margin-top: 2rem;
+	}
+	&.small {
+		text-transform: uppercase;
+		font-size: 40px;
+	}
+}
+
+h4 {
+	color: color(Dark);
+	font-size: rem(24);
+	line-height: 1.33;
+	font-weight: 500;
+}
+
+h5 {
+	font-size: rem(20);
+	line-height: 1.6;
+	font-weight: 400;
+}
+
+a {
+	position: relative;
+	text-decoration: none;
+	&::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 1px;
+		background: currentColor;
+		position: absolute;
+		left: 0;
+		top: 100%;
+		transition: .1s ease-in-out;
+	}
+	&:hover, &:focus, &:focus-within, &.active {
+		&::after {
+			transition: .2s ease-in-out;
+			width: 100%;
+		}
+	}
+	&.shipping-calculator-button {
+		&:after {
+			content: '' !important;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: 3px;
+			left: 100%;
+			background: url(../../includes/components/svgs/dropdown-arrow.svg) calc(100% - 10px)/8px no-repeat;
+		}
+	}
+}
+p {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	&.large {
+		font-size: rem(20);
+		line-height: 1.6;
+		@media #{$small-only} {
+			font-size: rem(16);
+		}
+	}
+	&.light {
+		font-size: rem(14);
+		line-height: 1.71;
+		font-weight: 600;
+		font-family: RobotoCondensed;
+		opacity: .4;
+		text-transform: uppercase;
+	}
+	&.bold {
+		font-weight: 500;
+	}
+}

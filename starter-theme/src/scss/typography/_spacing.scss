@@ -1,0 +1,37 @@
+h1 + p,
+h2 + p {
+	margin-top: 2rem;
+}
+
+h3 {
+	& + p {
+		margin-top: rem(24);
+	}
+	& + h4 {
+		margin-top: 1rem;
+	}
+}
+
+p {
+	& + button,
+	& + .button {
+		margin-top: 2rem;
+	}
+	&.light {
+		& + * {
+			margin-top: rem(10);
+		}
+	}
+}
+h2 + * {
+	margin-top: 1rem;
+}
+.related.products {
+	h2 + ul {
+		margin-top: 2rem;
+	}
+}
+
+h5 + p {
+	margin-top: 2rem;
+}

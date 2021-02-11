@@ -30,8 +30,8 @@ run `docker-compose up -d`. this will cook up a new docker container, fetch and 
 > note that especially on the first run, it will take a bit until you can access http://localhost as docker needs to download everything, setup your mysql server and so on. so be patient.
 
 ### theme development
-Step into the theme directory with `cd starter-theme` and run `npm install`.
-all the source files for scss and js are found in `./starter-theme/src/` and will be compiled to `./starter-theme/dist/` on production.
+Run `npm install`.
+all the source files for scss and js are found in `./starter-theme/` and will be compiled to `./dist/` on production.
 
 I've split the scripts in `admin.js` and `site.js` as we might want to have scripts specifically loaded only on the admin page, and others only on the frontend.
 
@@ -45,7 +45,7 @@ since we're using HMR and webpack-dev-server, we dont need to reload our page af
 
 #### production
 
-to build your theme, run `npm run build`. This compiles your scss and js and writes it to your `./starter-theme/dist/` folder.
+to build your theme, run `npm run build`. This compiles your scss and js and writes it to your `./dist/` folder.
 
 for production, open `./starter-theme/functions.php` and search for `function starter_theme_scripts()`.
 now comment out the development script reference from above, and make sure you load all your compiled files:
