@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
 	// context: path.resolve(__dirname, 'dist'),
 	output: {
-		publicPath: '/wp-content/themes/starter_theme/assets/'
+		publicPath: '/wp-content/themes/starter-theme/assets/'
 	},
 	module: {
 		rules: [
