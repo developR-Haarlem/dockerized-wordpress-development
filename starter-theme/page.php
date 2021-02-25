@@ -15,8 +15,7 @@
 get_header();
 ?>
 
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main">
+
 
     <?php
     while ( have_posts() ) :
@@ -24,17 +23,32 @@ get_header();
 
       //get_template_part( 'template-parts/content', 'page' );
       ?>
-      <!-- <video class="video" id="myVideo" muted="muted" loop="loop" autoplay="autoplay">
-        <source src="back.mp4" type="video/mp4">
-                  Your browser does not support HTML5 video.
-      </video> -->
+      <article class="block videoheader">
+        <div class="overlay"></div>
+        <video class="video" id="myVideo" muted="muted" loop="loop" autoplay="autoplay">
+            <source src="<?php echo get_template_directory_uri() ?>/assets/img/Hoge Vucht promotievideo-720fast.mp4" type="video/mp4">
+                   Your browser does not support HTML5 video.
+        </video> 
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <img src="https://picsum.photos/1200/500/" />
+      </article>
+
       <?php
       
     endwhile; // End of the loop.
     ?>
 
-    </main><!-- #main -->
-  </div><!-- #primary -->
+
+
 
 <?php
 

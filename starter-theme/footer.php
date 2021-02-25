@@ -11,7 +11,7 @@
 
 ?>
 
-  </div><!-- #content -->
+  </main><!-- started in header.php -->
 
   <footer id="colophon" class="site-footer">
    
