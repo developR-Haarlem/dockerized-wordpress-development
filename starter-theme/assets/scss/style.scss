@@ -1,4 +1,4 @@
-// @import "colors";
+@import "colors";
 @import '~matise-gryd/gryd-index.scss';
 @import '~matise-gryd/gryd-once.scss';
 @import "normalize";
@@ -6,19 +6,26 @@
 // basic examples how to include image / font and a media query. 
 // for more info goto: https://gryd.cydstumpel.nl
 body{
-	background:pink;
-	background-image: url('../../src/img/image.png');
+	background:color(Light);
+	// background-image: url('../../assets/img/image.png');
+	.skip-link{
+		display:none;
+	}
 	h1{
-		font-family: galano_grotesque;
-		font-size: 10vw;
-		width:grid(12);
-		border:1px solid red;
-		@media #{$medium-down} {
-			width: grid(24);
-			
-		}
+		font-family: Roboto;
+		font-weight: 300;
+
 		
 		
 	}
 	
+}
+
+header{
+	background-color: color(Dark);
+	color: color(Light);
+	a{ 
+		color: inherit;
+		text-decoration: none;
+	}
 }

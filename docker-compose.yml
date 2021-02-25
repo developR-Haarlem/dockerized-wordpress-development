@@ -18,14 +18,14 @@ services:
     depends_on:
       - db
 
-  wpcli:
-    image: wordpress:cli
-    user: xfs
-    volumes:
-      - ./wp-app:/var/www/html
-    depends_on:
-      - db
-      - wp
+  # wpcli:
+  #   image: wordpress:cli
+  #   user: xfs
+  #   volumes:
+  #     - ./wp-app:/var/www/html
+  #   depends_on:
+  #     - db
+  #     - wp
 
   db:
     image: mysql:latest # https://hub.docker.com/_/mysql/ - or mariadb https://hub.docker.com/_/mariadb

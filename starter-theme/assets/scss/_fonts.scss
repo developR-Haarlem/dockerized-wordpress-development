@@ -1,8 +1,15 @@
-@font-face {
-	font-family: 'galano_grotesque';
-	src: url('../fonts/galano_grotesque_alt_demo-Bold.woff2') format('woff2'),
-		 url('../fonts/galano_grotesque_alt_demo-Bold.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
+// @font-face {
+// 	font-family: 'galano_grotesque';
+// 	src: url('../fonts/galano_grotesque_alt_demo-Bold.woff2') format('woff2'),
+// 		 url('../fonts/galano_grotesque_alt_demo-Bold.woff') format('woff');
+// 	font-weight: normal;
+// 	font-style: normal;
+// 
+// }
+
+
+body{
+	font-family: 'Roboto', sans-serif;
 }

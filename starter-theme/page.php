@@ -22,13 +22,14 @@ get_header();
     while ( have_posts() ) :
       the_post();
 
-      get_template_part( 'template-parts/content', 'page' );
-
-      // If comments are open or we have at least one comment, load up the comment template.
-      if ( comments_open() || get_comments_number() ) :
-        comments_template();
-      endif;
-
+      //get_template_part( 'template-parts/content', 'page' );
+      ?>
+      <!-- <video class="video" id="myVideo" muted="muted" loop="loop" autoplay="autoplay">
+        <source src="back.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+      </video> -->
+      <?php
+      
     endwhile; // End of the loop.
     ?>
 
@@ -36,5 +37,5 @@ get_header();
   </div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();

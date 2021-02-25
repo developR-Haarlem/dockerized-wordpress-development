@@ -60,3 +60,11 @@ function smartwp_remove_wp_block_library_css(){
     wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
 } 
 add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
+
+function defer_parsing_of_js( $url ) {
+	if ( is_user_logged_in() ) return $url; //don't break WP Admin
+	if ( FALSE === strpos( $url, '.js' ) ) return $url;
+	// if ( strpos( $url, 'jquery.js' ) ) return $url;
+	return str_replace( ' src', ' defer src', $url );
+}
+add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );

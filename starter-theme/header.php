@@ -21,7 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+
   <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'starter_theme' ); ?></a>
 
   <header id="masthead" class="site-header">
@@ -34,7 +34,7 @@
         <?php
       else :
         ?>
-        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
         <?php
       endif;
       $starter_theme_description = get_bloginfo( 'description', 'display' );
